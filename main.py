@@ -60,7 +60,11 @@ def display_image(filename):
     print('display_image filename: ' + filename)
     return redirect(url_for('static', filename='uploads/' + filename), code=301)
 
-    
+@app.route('/displayy/<filename>')
+def new_image(filename2):
+
+    print('display_image filename: ' + filename2)
+    return redirect(url_for('static', filename2='generated_filename/' + filename2), code=301)
 
 if __name__ == "__main__":
     app.run(debug=True)
